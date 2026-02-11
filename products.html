@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Koleksiyon — Çağdaş Sanat Eserleri | ANYWAY</title>
+    <meta name="description"
+        content="ANYWAY sanat koleksiyonu: Karma teknik, ayna ve kanvas eserler. 100.000₺+ premium parçalar. Her eser özenle seçilmiş, mekanınıza derinlik katar.">
+    <link rel="canonical" href="https://anyway.studio/products.html">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://anyway.studio/products.html">
+    <meta property="og:title" content="Koleksiyon — Çağdaş Sanat Eserleri | ANYWAY">
+    <meta property="og:description" content="Özenle seçilmiş karma teknik, ayna ve kanvas eserleri keşfedin.">
+    <meta property="og:image" content="https://anyway.studio/brand-logo.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://anyway.studio/products.html">
+    <meta property="twitter:title" content="Koleksiyon — Çağdaş Sanat Eserleri | ANYWAY">
+    <meta property="twitter:description" content="Özenle seçilmiş karma teknik, ayna ve kanvas eserleri keşfedin.">
+    <meta property="twitter:image" content="https://anyway.studio/brand-logo.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css?v=4">
+    <link rel="stylesheet" href="css/premium-filters.css">
+    <link rel="stylesheet" href="css/instagram-footer.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <!-- Navigation -->
+    <nav class="nav fade-in" style="background: rgba(0,0,0,0.8); backdrop-filter: blur(20px);">
+        <div class="nav-left">
+            <a href="index.html" class="nav-brand-text">ANYWAY</a>
+        </div>
+
+        <div class="nav-center">
+            <a href="products.html" class="nav-link-center">KOLEKSİYON</a>
+            <a href="about.html" class="nav-link-center">HAKKINDA</a>
+            <a href="contact.html" class="nav-link-center">İLETİŞİM</a>
+        </div>
+
+        <div class="nav-right">
+
+            <button class="nav-icon-btn" onclick="openCart()">
+                SEPET <span id="cart-count"></span>
+            </button>
+        </div>
+
+        <button class="mobile-menu-btn" aria-label="Menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <h1 class="page-title">Koleksiyon</h1>
+        <p class="page-subtitle">Özenle seçilmiş çağdaş sanat eserleri. Her parça, mekanınıza karakter ve derinlik
+            katmak için tasarlandı.</p>
+    </section>
+
+    <!-- Premium Filter Section -->
+    <section class="premium-filter-container">
+        <div class="filter-glass-wrapper">
+            <!-- Category Filters -->
+            <div class="filter-category-section">
+                <span class="filter-label">KATEGORİ</span>
+                <div class="filter-pills">
+                    <button class="filter-pill active" data-filter="all">
+                        <span>Tümü</span>
+                        <span class="pill-count" id="count-all">10</span>
+                    </button>
+                    <button class="filter-pill" data-filter="mixed">
+                        <span>Karma Teknik</span>
+                        <span class="pill-count" id="count-mixed">0</span>
+                    </button>
+                    <button class="filter-pill" data-filter="skateboard">
+                        <span>Kaykay</span>
+                        <span class="pill-count" id="count-skateboard">0</span>
+                    </button>
+                    <button class="filter-pill" data-filter="canvas">
+                        <span>Kanvas</span>
+                        <span class="pill-count" id="count-canvas">0</span>
+                    </button>
+                    <button class="filter-pill" data-filter="mirror">
+                        <span>Ayna</span>
+                        <span class="pill-count" id="count-mirror">0</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Sort Section -->
+            <div class="filter-sort-section">
+                <span class="filter-label">SIRAYLA</span>
+                <select id="sort-select" class="premium-sort-dropdown">
+                    <option value="newest">En Yeni</option>
+                    <option value="price-low">Fiyat ↑</option>
+                    <option value="price-high">Fiyat ↓</option>
+                </select>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Grid -->
+    <section class="container mb-large">
+        <div class="product-grid" id="product-grid"></div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h3>ANYWAY</h3>
+                <p class="text-body" style="opacity:0.6;">Çağdaş Sanat Stüdyosu</p>
+            </div>
+
+            <div class="footer-section">
+                <h4>Menü</h4>
+                <div class="footer-links">
+                    <a href="products.html">Koleksiyon</a>
+                    <a href="about.html">Hakkında</a>
+                    <a href="contact.html">İletişim</a>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <h4>Takip Et</h4>
+                <div class="footer-links">
+                    <a href="mailto:anyway.studio7@gmail.com">Email</a>
+                    <a href="https://instagram.com/anyway.studioo" target="_blank" rel="noopener noreferrer"
+                        class="instagram-link">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                        </svg>
+                        Instagram
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2026 ANYWAY.</p>
+        </div>
+    </footer>
+
+
+    <script src="js/data.js"></script>
+
+    <script src="js/favorites.js"></script>
+    <script src="js/app.js"></script>
+    <!-- Removed collection.js to avoid conflicts, using inline logic -->
+
+    <script>
+        // Filter tabs
+        const filterTabs = document.querySelectorAll('.filter-tab');
+        filterTabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                filterTabs.forEach(t => t.classList.remove('active'));
+                tab.classList.add('active');
+                filterProducts(tab.dataset.filter);
+            });
+        });
+
+        function filterProducts(category) {
+            const cards = document.querySelectorAll('.product-card');
+            let count = 0;
+            cards.forEach(card => {
+                const show = category === 'all' || card.dataset.category === category;
+                card.style.display = show ? 'block' : 'none';
+                if (show) count++;
+            });
+            document.getElementById('product-count').textContent = count;
+        }
+
+        // Render products
+        function renderProducts() {
+            const grid = document.getElementById('product-grid');
+            if (!grid || typeof products === 'undefined') return;
+
+            grid.innerHTML = products.map((p, i) => {
+                // Uniform grid classes
+                let gridClass = 'editorial-item';
+
+                const badge = p.status !== 'Available'
+                    ? `<span class="product-badge sold">${p.status.toUpperCase()}</span>`
+                    : p.featured ? `<span class="product-badge">Öne Çıkan</span>` : '';
+
+                return `
+                    <div class="product-card ${gridClass}" data-category="${p.category}">
+                        <div class="card-image-wrapper">
+                            <button class="btn-fav ${favoritesManager.has(p.id) ? 'active' : ''}"
+                                onclick="toggleFav(event, '${p.id}')"
+                                aria-label="Add to favorites">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                    <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                                </svg>
+                            </button>
+                            <a href="product-detail.html?id=${p.id}" style="display:block; height:100%;">
+                                ${badge}
+                                <img src="${p.image}" alt="${p.title}" class="card-image" loading="lazy">
+                            </a>
+                        </div>
+                        <div class="product-card-info">
+                            <div>
+                                <h3 class="product-card-title">${p.title}</h3>
+                                <div class="product-card-category">${p.category}</div>
+                            </div>
+                            <div class="product-card-price">${formatPrice(p.price)}</div>
+                        </div>
+                    </div>
+                `;
+            }).join('');
+
+            // Update category counts after rendering
+            updateCategoryCounts();
+
+            // Re-trigger layout if using Masonry (not used here)
+        }
+
+        // Toggle Favorite
+        function toggleFav(e, id) {
+            e.preventDefault();
+            e.stopPropagation();
+            const btn = e.currentTarget;
+
+            const isAdded = favoritesManager.toggle(id);
+            if (isAdded) {
+                btn.classList.add('active');
+            } else {
+                btn.classList.remove('active');
+            }
+        }
+
+        // Update Category Counts
+        function updateCategoryCounts() {
+            const categories = ['all', 'mixed', 'skateboard', 'canvas', 'mirror'];
+            categories.forEach(cat => {
+                const count = cat === 'all'
+                    ? products.length
+                    : products.filter(p => p.category === cat).length;
+                const countEl = document.getElementById(`count-${cat}`);
+                if (countEl) countEl.textContent = count;
+            });
+        }
+
+        // Filter Logic (Premium Pills)
+        const filterPills = document.querySelectorAll('.filter-pill');
+        filterPills.forEach(pill => {
+            pill.addEventListener('click', () => {
+                // Remove active from all pills
+                filterPills.forEach(p => p.classList.remove('active'));
+                // Add active to clicked pill
+                pill.classList.add('active');
+
+                const filter = pill.getAttribute('data-filter');
+                const cards = document.querySelectorAll('.product-card');
+
+                cards.forEach(card => {
+                    if (filter === 'all' || card.getAttribute('data-category') === filter) {
+                        card.style.display = 'block';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // Update Auth Link on Load
+        document.addEventListener('DOMContentLoaded', () => {
+            // Auth removed
+        });
+
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const id = this.getAttribute('href');
+                if (id === '#') return;
+                const target = document.querySelector(id);
+                if (target) {
+                    e.preventDefault();
+                    window.scrollTo({
+                        top: target.offsetTop - 100,
+                        behavior: 'smooth'
+                    });
+                    history.pushState(null, null, id);
+                }
+            });
+        });
+
+        // Hash load
+        if (window.location.hash) {
+            const target = document.querySelector(window.location.hash);
+            if (target) {
+                setTimeout(() => {
+                    window.scrollTo({ top: target.offsetTop - 100, behavior: 'smooth' });
+                }, 100);
+            }
+        }
+
+        // Initialize with filter from URL
+        document.addEventListener('DOMContentLoaded', () => {
+            renderProducts(); // Ensure products are rendered first
+
+            const urlParams = new URLSearchParams(window.location.search);
+            const category = urlParams.get('category');
+
+            if (category) {
+                // Activate tab
+                filterTabs.forEach(t => t.classList.remove('active'));
+                const targetTab = document.querySelector(`.filter - tab[data - filter="${category}"]`);
+                if (targetTab) {
+                    targetTab.classList.add('active');
+                }
+
+                // Apply filter
+                // Use setTimeout to allow render to complete if async (though it's sync here)
+                setTimeout(() => filterProducts(category), 50);
+            }
+        });
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ANYWAY — Ürün Detay</title>
+    <meta name="description" content="ANYWAY çağdaş sanat eserleri. Detaylı ürün bilgisi, fiyat ve sipariş için.">
+    <link rel="canonical" href="https://anyway.studio/product-detail.html">
+
+    <!-- Base OG tags (dynamically updated by JS) -->
+    <meta property="og:type" content="product">
+    <meta property="og:site_name" content="ANYWAY">
+    <meta property="twitter:card" content="summary_large_image">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css?v=4">
+    <link rel="stylesheet" href="css/instagram-footer.css">
+    <link rel="stylesheet" href="css/mobile-sticky-cta.css">
+    <link rel="stylesheet" href="css/trust-badges.css">
+    <link rel="stylesheet" href="css/related-products.css">
+
+
+</head>
+
+<body>
+
+    <!-- Standard Header -->
+    <!-- Standard Header -->
+    <nav class="nav fade-in" style="background: rgba(0,0,0,0.8); backdrop-filter: blur(20px);">
+        <div class="nav-left">
+            <a href="index.html" class="nav-brand-text">ANYWAY</a>
+        </div>
+        <div class="nav-center">
+            <a href="products.html" class="nav-link-center">KOLEKSİYON</a>
+            <a href="about.html" class="nav-link-center">HAKKINDA</a>
+            <a href="contact.html" class="nav-link-center">İLETİŞİM</a>
+        </div>
+        <div class="nav-right">
+            <button class="nav-icon-btn" onclick="openCart()">SEPET <span id="cart-count"></span></button>
+        </div>
+    </nav>
+
+    <main class="product-detail-container">
+        <!-- Left: Image -->
+        <div class="product-image-wrapper">
+            <img src="" alt="" id="main-image">
+        </div>
+
+        <!-- Right: Info -->
+        <div class="product-info-wrapper">
+            <a href="products.html" class="detail-back-link">← KOLEKSİYONA DÖN</a>
+
+            <div class="detail-category" id="detail-category"></div>
+            <h1 class="product-title-large" id="detail-title">Yükleniyor...</h1>
+            <div class="product-price-large" id="detail-price"></div>
+
+            <p class="product-desc" id="detail-desc"></p>
+
+            <button class="add-to-cart-btn" id="add-to-cart-btn">SEPETE EKLE</button>
+
+            <!-- Trust Elements (TRUST-01) -->
+            <div class="trust-badges">
+                <div class="trust-badge">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="1" y="3" width="15" height="13"></rect>
+                        <path d="M16 8l5 3-5 3V8z"></path>
+                    </svg>
+                    <span>3-5 iş günü kargo</span>
+                </div>
+                <div class="trust-badge">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M8 7a4 4 0 1 0 8 0 4 4 0 0 0-8 0"></path>
+                        <path d="M6 21v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2"></path>
+                    </svg>
+                    <span>14 gün iade garantisi</span>
+                </div>
+                <div class="trust-badge">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect>
+                        <line x1="1" y1="10" x2="23" y2="10"></line>
+                    </svg>
+                    <span>Güvenli ödeme</span>
+                </div>
+            </div>
+
+            <div class="specs-list">
+                <div class="spec-item">
+                    <span style="color:var(--text-muted)">BOYUTLAR</span>
+                    <span id="spec-dim"></span>
+                </div>
+                <div class="spec-item">
+                    <span style="color:var(--text-muted)">MALZEME</span>
+                    <span id="spec-mat"></span>
+                </div>
+                <div class="spec-item">
+                    <span style="color:var(--text-muted)">ÇERÇEVE</span>
+                    <span id="spec-frame"></span>
+                </div>
+            </div>
+        </div>
+        </div>
+
+        <!-- Mobile Sticky CTA (UX-02) -->
+        <div class="mobile-sticky-cta" id="mobile-sticky-cta">
+            <div class="sticky-cta-content">
+                <div class="sticky-cta-info">
+                    <span class="sticky-cta-title" id="sticky-title">Ürün</span>
+                    <span class="sticky-cta-price" id="sticky-price">₺0</span>
+                </div>
+                <button class="sticky-cta-btn" id="sticky-add-btn">SEPETE EKLE</button>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h3>ANYWAY</h3>
+                <p class="text-body" style="opacity:0.6;">Çağdaş Sanat Stüdyosu</p>
+            </div>
+
+            <div class="footer-section">
+                <h4>Menü</h4>
+                <div class="footer-links">
+                    <a href="products.html">Koleksiyon</a>
+                    <a href="about.html">Hakkında</a>
+                    <a href="contact.html">İletişim</a>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <h4>Takip Et</h4>
+                <div class="footer-links">
+                    <a href="mailto:anyway.studio7@gmail.com">Email</a>
+                    <a href="https://instagram.com/anyway.studioo" target="_blank" rel="noopener noreferrer"
+                        class="instagram-link">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                        </svg>
+                        Instagram
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2026 ANYWAY.</p>
+        </div>
+    </footer>
+
+    <script src="js/data.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/favorites.js"></script>
+
+
+    <script>
+        function initDetail() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const productId = urlParams.get('id');
+
+            if (!productId || typeof products === 'undefined') {
+                window.location.href = 'products.html';
+                return;
+            }
+
+            const product = products.find(p => p.id === productId);
+            if (!product) {
+                window.location.href = 'products.html';
+                return;
+            }
+
+            document.title = `${product.title} — ANYWAY`;
+
+            // Dynamic SEO Meta Tags
+            const updateMeta = (property, content) => {
+                let meta = document.querySelector(`meta[property="${property}"]`) ||
+                    document.querySelector(`meta[name="${property}"]`);
+                if (!meta) {
+                    meta = document.createElement('meta');
+                    if (property.startsWith('og:') || property.startsWith('twitter:')) {
+                        meta.setAttribute('property', property);
+                    } else {
+                        meta.setAttribute('name', property);
+                    }
+                    document.head.appendChild(meta);
+                }
+                meta.setAttribute('content', content);
+            };
+
+            updateMeta('description', product.description);
+            updateMeta('og:title', `${product.title} — ANYWAY`);
+            updateMeta('og:description', product.description);
+            updateMeta('og:image', `https://anyway.studio/${product.image}`);
+            updateMeta('og:url', `https://anyway.studio/product-detail.html?id=${product.id}`);
+            updateMeta('twitter:title', `${product.title} — ANYWAY`);
+            updateMeta('twitter:description', product.description);
+            updateMeta('twitter:image', `https://anyway.studio/${product.image}`);
+
+            document.getElementById('main-image').src = product.image;
+            document.getElementById('detail-category').textContent = product.category;
+            document.getElementById('detail-title').textContent = product.title;
+            document.getElementById('detail-price').textContent = formatPrice(product.price);
+            document.getElementById('detail-desc').textContent = product.description;
+            document.getElementById('spec-dim').textContent = product.dimensions;
+            document.getElementById('spec-mat').textContent = product.material;
+            document.getElementById('spec-frame').textContent = product.frame;
+
+            const addBtn = document.getElementById('add-to-cart-btn');
+            const stickyCTA = document.getElementById('mobile-sticky-cta');
+            const stickyBtn = document.getElementById('sticky-add-btn');
+
+            // Update sticky CTA
+            if (document.getElementById('sticky-title')) document.getElementById('sticky-title').textContent = product.title;
+            if (document.getElementById('sticky-price')) document.getElementById('sticky-price').textContent = formatPrice(product.price);
+
+            if (product.status !== 'Available') {
+                addBtn.textContent = 'SATILDI';
+                addBtn.disabled = true;
+                addBtn.style.background = '#333';
+                addBtn.style.color = '#888';
+                if (stickyBtn) {
+                    stickyBtn.textContent = 'SATILDI';
+                    stickyBtn.disabled = true;
+                }
+            } else {
+                const handler = () => { addToCart(product); openCart(); };
+                addBtn.onclick = handler;
+                if (stickyBtn) stickyBtn.onclick = handler;
+            }
+
+            // Sticky CTA scroll visibility
+            if (stickyCTA && window.innerWidth <= 1024) {
+                window.addEventListener('scroll', () => {
+                    const rect = addBtn.getBoundingClientRect();
+                    const visible = rect.top >= 0 && rect.bottom <= window.innerHeight;
+                    if (!visible && window.scrollY > 200) stickyCTA.classList.add('visible');
+                    else stickyCTA.classList.remove('visible');
+                });
+            }
+
+            // Render related products (CONVERT-03)
+            renderRelatedProducts(product);
+        }
+
+        function renderRelatedProducts(currentProduct) {
+            const container = document.getElementById('related-grid');
+            if (!container || typeof products === 'undefined') return;
+
+            // Filter: same category OR similar price range (±30%)
+            const priceMin = currentProduct.price * 0.7;
+            const priceMax = currentProduct.price * 1.3;
+
+            let related = products.filter(p =>
+                p.id !== currentProduct.id && (
+                    p.category === currentProduct.category ||
+                    (p.price >= priceMin && p.price <= priceMax)
+                )
+            );
+
+            // Limit to 4
+            related = related.slice(0, 4);
+
+            container.innerHTML = '';
+            related.forEach(product => {
+                const card = createProductCard(product);
+                container.appendChild(card);
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            initDetail();
+        });
+    </script>
+</body>
+
+</html>

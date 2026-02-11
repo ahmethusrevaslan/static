@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ANYWAY — Çağdaş Sanat Stüdyosu</title>
+    <meta name="description"
+        content="Çağdaş sanat stüdyosu. Mekanınıza karakter ve derinlik katan özenle seçilmiş karma teknik, ayna ve kanvas eserler. Premium sanat koleksiyonu.">
+    <link rel="canonical" href="https://anyway.studio/">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://anyway.studio/">
+    <meta property="og:title" content="ANYWAY — Çağdaş Sanat Stüdyosu">
+    <meta property="og:description"
+        content="Mekanınıza karakter ve derinlik katan özenle seçilmiş çağdaş sanat eserleri. Statement art for modern spaces.">
+    <meta property="og:image" content="https://anyway.studio/brand-logo.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://anyway.studio/">
+    <meta property="twitter:title" content="ANYWAY — Çağdaş Sanat Stüdyosu">
+    <meta property="twitter:description"
+        content="Mekanınıza karakter ve derinlik katan özenle seçilmiş çağdaş sanat eserleri.">
+    <meta property="twitter:image" content="https://anyway.studio/brand-logo.png">
+
+    <link rel="icon" type="image/png" href="brand-logo.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Syne:wght@700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css?v=4">
+</head>
+
+<body>
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="nav fade-in">
+        <div class="nav-left">
+            <a href="index.html" class="nav-brand-text">ANYWAY</a>
+        </div>
+
+        <div class="nav-center">
+            <a href="products.html" class="nav-link-center">KOLEKSİYON</a>
+            <a href="about.html" class="nav-link-center">HAKKINDA</a>
+            <a href="contact.html" class="nav-link-center">İLETİŞİM</a>
+        </div>
+
+        <div class="nav-right">
+
+            <button id="btn-search" class="nav-icon-btn" aria-label="Search">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                </svg>
+            </button>
+
+            <button id="btn-wishlist" class="nav-icon-btn" aria-label="Favorites">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path
+                        d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+                    </path>
+                </svg>
+            </button>
+
+            <button onclick="openCart()" class="nav-icon-btn cart-btn">
+                Sepet <span id="cart-count">(0)</span>
+            </button>
+        </div>
+
+        <button class="mobile-menu-btn" aria-label="Menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-fullbleed">
+        <div class="hero-background">
+            <iframe allowtransparency="true"
+                src="https://app.endlesstools.io/embed/772abef6-808c-450b-bd56-e190155667b1"
+                title="Endless Tools Editor" frameborder="0" onload="this.classList.add('loaded')"></iframe>
+        </div>
+        <div class="hero-content">
+            <h1 class="hero-title">ANYWAY</h1>
+            <p class="hero-subtitle">Statement art for modern spaces.</p>
+        </div>
+        <div class="scroll-indicator fade-in">
+            <div class="scroll-line"></div>
+        </div>
+    </section>
+
+    <!-- Intro Section -->
+    <section class="animated-hero">
+        <div class="hero-text-wrapper">
+            <h2 class="animated-title">
+                <span class="static-text">Every piece is</span>
+                <span class="word-rotator">
+                    <span class="word active">intentional.</span>
+                    <span class="word">timeless.</span>
+                    <span class="word">quiet.</span>
+                    <span class="word">exclusive.</span>
+                    <span class="word">refined.</span>
+                </span>
+            </h2>
+
+            <p class="text-body" style="margin-bottom: 32px; max-width: 500px;">
+                Sıradanlığı reddediyoruz. Her parça, mekanınızda bir imza niteliği taşır.
+                Modern yaşamın kaosunda, sanatla nefes alan alanlar yaratıyoruz.
+            </p>
+
+            <div class="animated-buttons">
+                <a href="contact.html" class="btn-outline">İletişime Geç</a>
+                <a href="products.html" class="btn-primary">Koleksiyon</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h3>ANYWAY</h3>
+                <p class="text-body" style="opacity:0.6;">Çağdaş Sanat Stüdyosu</p>
+            </div>
+
+            <div class="footer-section">
+                <h4>Menü</h4>
+                <div class="footer-links">
+                    <a href="products.html">Koleksiyon</a>
+                    <a href="about.html">Hakkında</a>
+                    <a href="contact.html">İletişim</a>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <h4>Takip Et</h4>
+                <div class="footer-links">
+                    <a href="mailto:anyway.studio7@gmail.com">anyway.studio7@gmail.com</a>
+                    <a href="#">@anyway.studio</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2026 ANYWAY. Tüm hakları saklıdır.</p>
+            <div class="footer-legal">
+                <a href="legal.html#privacy">Gizlilik</a>
+                <a href="legal.html#terms">Şartlar</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Overlays -->
+    <div id="search-overlay" class="search-overlay">
+        <button id="close-search" class="close-search">&times;</button>
+        <div class="search-container">
+            <input type="text" id="search-input" placeholder="ARA..." autocomplete="off">
+            <div class="search-results"></div>
+        </div>
+    </div>
+
+    <div id="wishlist-drawer" class="cart-drawer">
+        <div class="cart-header">
+            <h2 class="cart-title">FAVORİLER</h2>
+            <button id="close-wishlist" class="cart-close">&times;</button>
+        </div>
+        <div class="cart-items" id="wishlist-items">
+            <div class="empty-msg" style="opacity:0.5; text-align:center; margin-top:40px; padding: 0 24px;">
+                <p style="margin-bottom: 16px; font-size: 15px;">Favori listeniz boş.</p>
+                <a href="products.html" class="btn-outline"
+                    style="display: inline-block; padding: 12px 24px; margin-top: 8px;">Koleksiyonu Keşfedin</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/data.js"></script>
+
+    <script src="js/favorites.js"></script>
+    <script src="js/app.js"></script>
+    <script>
+        // Inline init logic moved to DOMContentLoaded in app.js where possible, 
+        // but specific element observers stay for safety
+
+        // Remove Preloader
+        window.addEventListener('load', () => {
+            document.querySelector('.preloader').classList.add('hidden');
+        });
+
+
+    </script>
+</body>
+
+</html>

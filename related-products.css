@@ -1,0 +1,36 @@
+/* ===============================
+   RELATED PRODUCTS (CONVERT-03)
+   =============================== */
+.related-products {
+    background: var(--bg-secondary);
+    border-top: 1px solid var(--border);
+}
+
+.related-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 24px;
+}
+
+@media (max-width: 768px) {
+    .related-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .related-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.related-grid .product-card {
+    background: var(--bg-primary);
+    border: 1px solid var(--border);
+    transition: border-color 0.3s;
+}
+
+.related-grid .product-card:hover {
+    border-color: var(--border-hover);
+}

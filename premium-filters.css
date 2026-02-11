@@ -1,0 +1,197 @@
+/* ============================================
+   PREMIUM FILTER SECTION
+   ============================================ */
+
+.premium-filter-container {
+    max-width: 1400px;
+    margin: 0 auto 80px;
+    padding: 0 40px;
+}
+
+.filter-glass-wrapper {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+    padding: 32px 40px;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 48px;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.filter-glass-wrapper:hover {
+    background: rgba(255, 255, 255, 0.03);
+    border-color: rgba(255, 255, 255, 0.12);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+}
+
+.filter-category-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.filter-label {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    color: rgba(255, 255, 255, 0.4);
+    text-transform: uppercase;
+}
+
+.filter-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.filter-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 24px;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    color: rgba(255, 255, 255, 0.7);
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.filter-pill::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.filter-pill:hover::before {
+    opacity: 1;
+}
+
+.filter-pill:hover {
+    border-color: rgba(255, 255, 255, 0.3);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+}
+
+.filter-pill.active {
+    background: rgba(255, 255, 255, 0.95);
+    border-color: rgba(255, 255, 255, 0.95);
+    color: #000;
+    font-weight: 600;
+}
+
+.filter-pill.active .pill-count {
+    background: rgba(0, 0, 0, 0.1);
+    color: #000;
+}
+
+.pill-count {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 24px;
+    height: 24px;
+    padding: 0 8px;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 12px;
+    font-size: 11px;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.6);
+    transition: all 0.3s;
+}
+
+.filter-sort-section {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    min-width: 180px;
+}
+
+.premium-sort-dropdown {
+    padding: 12px 20px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 8px;
+    color: #fff;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    cursor: pointer;
+    transition: all 0.3s;
+    outline: none;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1.5L6 6.5L11 1.5' stroke='rgba(255,255,255,0.6)' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 16px center;
+    padding-right: 44px;
+}
+
+.premium-sort-dropdown:hover {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+.premium-sort-dropdown:focus {
+    border-color: rgba(255, 255, 255, 0.5);
+    box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.1);
+}
+
+.premium-sort-dropdown option {
+    background: #1a1a1a;
+    color: #fff;
+    padding: 12px;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .filter-glass-wrapper {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 32px;
+        padding: 28px 32px;
+    }
+
+    .filter-sort-section {
+        min-width: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .premium-filter-container {
+        padding: 0 24px;
+        margin-bottom: 60px;
+    }
+
+    .filter-glass-wrapper {
+        padding: 24px;
+        gap: 24px;
+    }
+
+    .filter-pills {
+        gap: 8px;
+    }
+
+    .filter-pill {
+        padding: 8px 16px;
+        font-size: 12px;
+    }
+
+    .pill-count {
+        min-width: 20px;
+        height: 20px;
+        font-size: 10px;
+    }
+}

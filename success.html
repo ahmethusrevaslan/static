@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sipariş Onayı — ANYWAY</title>
+    <link rel="icon" type="image/png" href="brand-logo.png">
+
+    <!-- Fonts (Global Refactor: Hanken Grotesk) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@300;400;500;600;800&family=Inter:wght@300;400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        .success-page {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 40px;
+            background: #000;
+        }
+
+        .success-icon {
+            width: 80px;
+            height: 80px;
+            margin-bottom: 32px;
+            color: #fff;
+            animation: scaleIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+
+        @keyframes scaleIn {
+            from {
+                transform: scale(0);
+                opacity: 0;
+            }
+
+            to {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        .success-title {
+            font-size: 40px;
+            font-weight: 300;
+            margin-bottom: 16px;
+            letter-spacing: -0.01em;
+        }
+
+        .order-code {
+            font-family: inherit;
+            font-weight: 600;
+            color: #E2B66A;
+            /* Gold Accent */
+        }
+
+        .success-desc {
+            color: var(--text-muted);
+            max-width: 500px;
+            margin: 0 auto 48px;
+            line-height: 1.6;
+            animation: fadeIn 1s 0.5s forwards;
+            opacity: 0;
+        }
+
+        .action-buttons {
+            display: flex;
+            gap: 16px;
+            animation: fadeIn 1s 0.8s forwards;
+            opacity: 0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="success-page">
+        <svg class="success-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+            <polyline points="22 4 12 14.01 9 11.01"></polyline>
+        </svg>
+
+        <h1 class="success-title">Teşekkürler</h1>
+        <p class="success-desc">
+            Siparişiniz başarıyla alındı. <br>
+            Referans Kodunuz: <span id="order-id" class="order-code">...</span>
+            <br><br>
+            Sipariş detaylarına e-posta adresinizden ulaşabilirsiniz.
+        </p>
+
+        <div class="action-buttons">
+            <a href="index.html" class="btn-outline">ANA SAYFA</a>
+            <a href="products.html" class="btn-primary">ALIŞVERİŞE DEVAM ET</a>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script>
+        // Get Order ID from URL
+        const params = new URLSearchParams(window.location.search);
+        const orderId = params.get('orderId');
+
+        if (orderId) {
+            document.getElementById('order-id').textContent = orderId;
+        } else {
+            // Fallback
+            window.location.href = 'index.html';
+        }
+    </script>
+</body>
+
+</html>

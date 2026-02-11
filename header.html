@@ -1,0 +1,48 @@
+<!-- ANYWAY - Site Header Component -->
+<nav class="nav fade-in">
+    <div class="nav-left">
+        <a href="index.html" class="nav-brand-text">ANYWAY</a>
+    </div>
+
+    <div class="nav-center">
+        <a href="products.html" class="nav-link-center">KOLEKSİYON</a>
+        <a href="about.html" class="nav-link-center">HAKKINDA</a>
+        <a href="contact.html" class="nav-link-center">İLETİŞİM</a>
+    </div>
+
+    <div class="nav-right">
+        <!-- Auth Link -->
+        <a href="login.html" id="auth-link" class="nav-icon-btn" aria-label="Account">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                <circle cx="12" cy="7" r="4"></circle>
+            </svg>
+        </a>
+
+        <button id="btn-search" class="nav-icon-btn" aria-label="Search">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+        </button>
+
+        <button id="btn-wishlist" class="nav-icon-btn" aria-label="Favorites">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path
+                    d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+                </path>
+            </svg>
+        </button>
+
+        <button onclick="openCart()" class="nav-icon-btn cart-btn">
+            Sepet <span id="cart-count">(0)</span>
+        </button>
+    </div>
+
+    <button class="mobile-menu-btn" aria-label="Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+</nav>

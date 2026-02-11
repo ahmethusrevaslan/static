@@ -1,0 +1,33 @@
+/* Instagram Link Footer */
+.instagram-footer-link {
+    text-align: center;
+    padding: 32px 0 48px;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    margin-top: 40px;
+}
+
+.instagram-footer-link a {
+    color: rgba(255, 255, 255, 0.6);
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 400;
+    letter-spacing: 0.05em;
+    transition: opacity 0.3s ease;
+    display: inline-block;
+}
+
+.instagram-footer-link a:hover {
+    opacity: 1;
+    color: rgba(255, 255, 255, 1);
+}
+
+@media (max-width: 768px) {
+    .instagram-footer-link {
+        padding: 24px 0 40px;
+        margin-top: 32px;
+    }
+
+    .instagram-footer-link a {
+        font-size: 12px;
+    }
+}
